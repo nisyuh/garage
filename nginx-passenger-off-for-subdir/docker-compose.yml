@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - ${PWD}/nginx/nginx.conf:/opt/nginx/conf/nginx.conf
+    ports:
+      - '127.0.0.1:8880:80'

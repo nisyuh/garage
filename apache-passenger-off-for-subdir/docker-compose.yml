@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - ./httpd/conf:/etc/apache2/sites-available
+    ports:
+      - '127.0.0.1:8880:80'
